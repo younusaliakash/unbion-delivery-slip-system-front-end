@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from "../assets/images/logo.png"
 
 let banglaNumber = {
     0: "০",
@@ -12,8 +11,8 @@ let banglaNumber = {
     7: "৭",
     8: "৮",
     9: "৯",
-    "AM": "সকাল",
-    "PM": "বিকাল",
+    // "AM": "সকাল",
+    // "PM": "বিকাল",
     "Sat": "শনিবার",
     "Sun": "রবিবার",
     "Mon": "সোমবার",
@@ -23,9 +22,9 @@ let banglaNumber = {
     "Fri": "শুক্রবার"
 };
 
-const days = ["রবিবার", "সোমবার", "মঙ্গলবার", "বুধবার", "বৃহস্পতিবার", "শুক্রবার", "শনিবার"]
+export const days = ["রবিবার", "সোমবার", "মঙ্গলবার", "বুধবার", "বৃহস্পতিবার", "শুক্রবার", "শনিবার"]
 
-const engToBdNum = (str) => {
+export const engToBdNum = (str) => {
     for (var x in banglaNumber) {
         str = str.replace(new RegExp(x, "g"), banglaNumber[x]);
     }
@@ -48,7 +47,11 @@ export const Invoice = React.forwardRef((props, ref) => {
                             <h4>ডেলিভারি স্লিপ</h4>
                             <h4>উদ্যোক্তা : নয়ন প্রামাণিক</h4>
                             <h3>হটলাইন : ০১৭৫০৩৩৪৫৩৮</h3>
+                            <h3>ইমেইল : <span className='email'>mdnayonpk@gmail.com</span></h3>
                             <h3 style={{ marginTop: "8px" }}>সেবার ধরণ : {info.service_type}</h3>
+                        </div>
+                        <div className="notice">
+                            <p>জন্মের ৪৫ দিনের মধ্যে আপনার সন্তানের জন্ম নিবন্ধন করুন</p>
                         </div>
                         <div className="user_information">
                             <div className="row one">
@@ -84,7 +87,7 @@ export const Invoice = React.forwardRef((props, ref) => {
                             </div>
                             <div st className="row lawyerd">
                                 <div className="enterpunaur">
-                                    <h4>উদ্যোক্তার সিল এবং স্বাক্ষর</h4>
+                                    <h5>উদ্যোক্তার সিল এবং স্বাক্ষর</h5>
                                 </div>
                                 <div className="system_developer">
                                     <p>System Dev : <br/> Younus Ali Akash</p>

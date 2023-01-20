@@ -114,25 +114,44 @@ label {
 .pfd {
   font-family: myBanglaFont;
   width: 350px;
-  height: 320px;
+  height: 338px;
   border: 1px dashed black;
-padding: 7px 15px;
-position: relative;
+  border-radius: 5px;
+  padding: 7px 15px;
+  margin: 20px 0 0 25px;
+  position: relative;
 }
 .pdf_header {
   text-align: center;
 }
 .pdf_header h1 {
-    font-size: 20px;
+  font-size: 20px;
 }
 .pdf_header h3 {
-    font-size: 16px;
+  font-size: 16px;
 }
 .pdf_header h4 {
-    font-size: 13px !important;
+  font-size: 13px !important;
 }
 .user_information {
-    margin-top: 8px;
+  margin-top: 8px;
+}
+.email {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+}
+.notice {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  width: 69px;
+  border: 1px solid gray;
+  padding: 4px;
+  border-radius: 3px;
+}
+.notice p {
+  font-size: 10px;
+  text-align: center;
 }
 .user_information .row {
   display: flex;
@@ -146,31 +165,38 @@ position: relative;
   width: 37%;
 }
 .user_information p {
-    margin: 0;
-    margin-bottom: 5px;
+  margin: 0;
+  margin-bottom: 5px;
 }
-.lawyerd{
-    margin-top: 8px !important;
-    align-items: center !important;
-    justify-content: space-between !important;
+.lawyerd {
+  margin-top: 8px !important;
+  align-items: center !important;
+  justify-content: space-between !important;
 }
-.enterpunaur{
-    position: absolute;
-    left: 10px;
-    bottom: 20px;
+.enterpunaur {
+  position: absolute;
+  left: 10px;
+  bottom: 20px;
 }
 .system_developer {
-    font-size: 8px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    color: rgb(112 108 108);
-    position: absolute;
-    right: 5px;
-    bottom: 7px;
+  font-size: 8px;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: rgb(112 108 108);
+  position: absolute;
+  right: 5px;
+  bottom: 7px;
 }
 .desclimar {
-    font-size: 10px;
-    position: absolute;
-    left: 5px;
-    bottom: -10px;
+  font-size: 10px;
+  position: absolute;
+  left: 5px;
+  bottom: -10px;
+}
+.clock{
+    margin:  0;
+    padding: 0;
+    color: black !important;
+    font-weight: 600;
 }
