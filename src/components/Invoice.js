@@ -58,7 +58,7 @@ export const Invoice = React.forwardRef((props, ref) => {
                                 </div>
                                 <div className="col_2">
                                     <h4>ওয়ার্ড নং :</h4>
-                                    <p>{info.word_no}</p>
+                                    <p>{engToBdNum((info.word_no).toString())}</p>
                                 </div>
                             </div>
                             <div className="row two">
@@ -68,7 +68,7 @@ export const Invoice = React.forwardRef((props, ref) => {
                                 </div>
                                 <div className="col_2">
                                     <h4>সার্ভিস ফি :</h4>
-                                    <p>{info.fee} টাকা</p>
+                                    <p>{engToBdNum((info.fee).toString())} টাকা</p>
                                 </div>
                             </div>
                             <div className="row three">
