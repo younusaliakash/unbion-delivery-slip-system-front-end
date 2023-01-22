@@ -87,6 +87,13 @@ label {
   height: 40px;
   margin-top: 15px;
 }
+.input-number{
+  -moz-appearance: none;
+}
+.input-number::-webkit-inner-spin-button,
+.input-number::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+}
 .credit {
   margin-top: 10px;
   display: flex;

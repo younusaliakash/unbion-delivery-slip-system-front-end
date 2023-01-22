@@ -5,6 +5,7 @@ import * as Yup from 'yup';
 import { useReactToPrint } from 'react-to-print';
 import { useEffect, useRef, useState } from 'react';
 import { days, engToBdNum, Invoice } from './components/Invoice';
+import Clock from './components/Clock';
 
 
 function App() {
@@ -18,14 +19,7 @@ function App() {
   });
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
-  const [currentTime, setCurrentTime] = useState(new Date())
   
-
-  const updateTime = () => {
-    setCurrentTime(new Date())
-  }
-
-  setInterval(updateTime, 1000)
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -39,7 +33,7 @@ function App() {
   });
 
   useEffect(() => {
-    document.title = `${info ? info?.name + "-" + "বিশা ইউনিয়ন ডিজিটাল সেন্টার ডেলিভারি স্লিপ সিস্টেম | ইউনুস আলী আকাশ" : "বিশা ইউনিয়ন ডিজিটাল সেন্টার ডেলিভারি স্লিপ সিস্টেম | ইউনুস আলী আকাশ"} `
+    document.title = `${info ? info?.name + " " + "বিশা ইউনিয়ন ডিজিটাল সেন্টার ডেলিভারি স্লিপ সিস্টেম | ইউনুস আলী আকাশ" : "বিশা ইউনিয়ন ডিজিটাল সেন্টার ডেলিভারি স্লিপ সিস্টেম | ইউনুস আলী আকাশ"} `
   }, [info?.name])
 
   const handleSubmit = (e) => {
@@ -89,7 +83,6 @@ function App() {
   };
 
   useEffect(() => {
-    console.log(formErrors);
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       handlePrint()
       setInfo({
@@ -156,7 +149,7 @@ function App() {
             </div>
             <div className="word_no input_field">
               <label htmlFor="word_no">ওয়ার্ড নং :</label>
-              <input type="number" name="word_no" id="word_no"
+              <input type="number" name="word_no" id="word_no" className='input-number'
                 onChange={handleChange}
                 value={info.word_no} />
               {formErrors && formErrors.word_no ? (
@@ -176,7 +169,7 @@ function App() {
             </div>
             <div className="service_fee input_field">
               <label htmlFor="fee">সার্ভিস ফি (টাকা)</label>
-              <input type="number" name="fee" id="fee"
+              <input type="number" name="fee" id="fee" className='input-number'
                 onChange={handleChange}
                 value={info.fee} />
               {formErrors && formErrors.fee ? (
@@ -195,9 +188,6 @@ function App() {
               ইউনুস আলী আকাশ
             </a>
             <p className='clock'>
-              {
-                 engToBdNum(new Date(currentTime).toLocaleTimeString())
-              } {" | "} 
               <span>{engToBdNum(new Date().toLocaleDateString("en-GB"))}</span> {" | "} 
               <span>{days[new Date().getDay()]}</span>
             </p>
